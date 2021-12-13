@@ -382,7 +382,7 @@
               },
               "02_change_log_region": {
                 "command": {
-                  "Fn::Join": ["", ["sed -i 's/region = us-east-2/region = ",
+                  "Fn::Join": ["", ["sed -i 's/region = us-west-2/region = ",
                     { "Ref": "AWS::Region" },
                     "/g' /etc/awslogs/awscli.conf"]]
                 }
