@@ -89,32 +89,33 @@
       }
     },
 
-   {"__comments__":{ "JenkinsRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [{
-            "Effect": "Allow",
-            "Principal": {
-              "Service": [ "ec2.amazonaws.com" ]
-            },
-            "Action": ["sts:AssumeRole"]
-          }]
-        },
-        "ManagedPolicyArns":["arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess","arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"],
-        "Path": "/",
-        "Policies": [{
-          "PolicyName": "JenkinsRolePolicy",
-          "PolicyDocument": {
-            "Version": "2012-10-17",
-            "Statement": [{
-              "Effect": "Allow",
-              "Action": ["logs:*"],
-              "Resource": [
-                "arn:aws:logs:*:*:*"
-              ]
-            }, {
+   #"JenkinsRole": {
+    #  "Type": "AWS::IAM::Role",
+     # "Properties": {
+      #  "AssumeRolePolicyDocument": {
+       #   "Version": "2012-10-17",
+        #  "Statement": [{
+         #   "Effect": "Allow",
+          #  "Principal": {
+           #   "Service": [ "ec2.amazonaws.com" ]
+            #},
+            #"Action": ["sts:AssumeRole"]
+          #}]
+        #},
+        #"ManagedPolicyArns":["arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess","arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"],
+        #"Path": "/",
+        #"Policies": [{
+         # "PolicyName": "JenkinsRolePolicy",
+          #"PolicyDocument": {
+           # "Version": "2012-10-17",
+            #"Statement": [{
+             # "Effect": "Allow",
+              #"Action": ["logs:*"],
+              #"Resource": [
+               # "arn:aws:logs:*:*:*"
+              #]
+            #}, 
+            {
               "Effect": "Allow",
               "Action": "ecs:*",
               "Resource": "*"
