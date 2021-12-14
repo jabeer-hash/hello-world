@@ -89,7 +89,7 @@
       }
     },
 
-    "JenkinsRole": {
+   {"__comments__":{ "JenkinsRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -132,7 +132,7 @@
           "Ref": "JenkinsRole"
         }]
       }
-    },
+    }}},
 
     "WebServerGroup": {
       "Type": "AWS::AutoScaling::AutoScalingGroup",
